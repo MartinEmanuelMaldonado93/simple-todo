@@ -1,10 +1,11 @@
-import { env } from '@/environments'
-import Image from 'next/image'
-import Link from 'next/link';
+import NavMenu from './components/NavMenu';
+import { ThemeToggle } from 'components/ToggleTheme';
 
 export default function Home() {
   return (
-		<div>
-		</div>
+		<>
+      <ThemeToggle />
+			<NavMenu />
+		</>
 	);
 }

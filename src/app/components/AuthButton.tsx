@@ -1,4 +1,6 @@
 "use client";
+import { Button } from "components/ui/button";
+import { Label } from "components/ui/label";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 export function AuthButton() {
@@ -16,9 +18,11 @@ export function AuthButton() {
 	}
 
 	return (
-		<>
-			Not signed in <br />
-			<button onClick={() => signIn()}>sign in</button>
-		</>
+		<div className='flex justify-around items-center'>
+			<Label>Not signed in</Label>
+			<Button variant={"secondary"} onClick={() => signIn()}>
+				sign in
+			</Button>
+		</div>
 	);
 }

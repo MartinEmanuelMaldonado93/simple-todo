@@ -2,15 +2,6 @@ import { env } from "@/environments";
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 
-// export const authOptions = {
-// 	providers: [
-// 		GithubProvider({
-// 			clientId: env.GITHUB_ID,
-// 			clientSecret: env.GITHUB_SECRET,
-// 		}),
-// 	],
-// };
-
 export const handler = NextAuth({
 	providers: [
 		GithubProvider({
@@ -27,5 +18,8 @@ export const handler = NextAuth({
 			return baseUrl;
 		},
 	},
+  theme : {
+    colorScheme: 'dark',
+  }
 });
 export { handler as GET, handler as POST };
