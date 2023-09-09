@@ -1,11 +1,13 @@
+import { ThemeToggle } from "components/ToggleTheme";
 import { ThemeProvider } from "components/theme-provider";
+import { Button } from "components/ui/button";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { Inter } from "next/font/google";
+import { Navigation } from "./components/NavigationList";
 import SessionProvider from "./components/SessionProvider";
 import "./globals.css";
-import { Navigation } from "./components/NavigationList";
-import { ThemeToggle } from "components/ToggleTheme";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,13 @@ export default async function RootLayout({
 			<body className={inter.className}>
 				<SessionProvider session={session}>
 					<ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-						<ThemeToggle />
+						<div className="flex justify-around items-center p-2">
+							<ThemeToggle />
+							<Button variant={"outline"}>
+								{" "}
+								<Link href='/react-patterns'> See React patterns </Link>
+							</Button>
+						</div>
 						<Navigation />
 						{children}
 					</ThemeProvider>

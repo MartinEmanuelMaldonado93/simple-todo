@@ -1,13 +1,5 @@
-import { AuthButton } from './components/AuthButton';
-import { ThemeToggle } from 'components/ToggleTheme';
-import { Navigation } from './components/NavigationList';
+import { AuthButton } from "./components/AuthButton";
 
 export default function Home() {
-  return (
-		<>
-			{/* <ThemeToggle /> */}
-			<AuthButton />
-      {/* <Navigation /> */}
-		</>
-	);
+	return <AuthButton />;
 }

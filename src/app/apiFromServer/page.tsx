@@ -1,9 +1,10 @@
+import { baseUrl } from "@/environments";
 import { headers } from "next/headers";
 
 export default async function ApiFromServer() {
-	const baseUrl = "http://localhost:3000/api/whoAmi";
+	const URL = `${baseUrl}/api/whoAmi`;
 
-	const resp = await fetch(baseUrl, {
+	const resp = await fetch(URL, {
 		method: "GET",
 		headers: headers(),
 	}).then((res) => res.json());
