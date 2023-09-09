@@ -4,6 +4,8 @@ import { getServerSession } from "next-auth";
 import { Inter } from "next/font/google";
 import SessionProvider from "./components/SessionProvider";
 import "./globals.css";
+import { Navigation } from "./components/NavigationList";
+import { ThemeToggle } from "components/ToggleTheme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,8 @@ export default async function RootLayout({
 			<body className={inter.className}>
 				<SessionProvider session={session}>
 					<ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+						<ThemeToggle />
+						<Navigation />
 						{children}
 					</ThemeProvider>
 				</SessionProvider>

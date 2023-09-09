@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import WhoAmIButton from "./WhoAmIButton";
+import WhoAmIButton from "./ClientButton";
 
 export default async function ServerActions() {
 	const whoAmI = async () => {

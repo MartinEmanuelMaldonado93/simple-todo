@@ -10,9 +10,12 @@ export default async function ApiFromServer() {
 
 	return (
 		<>
-			<div>
-				Api route from SErver
-				<div>NAME : {resp?.firstName}</div>
+			<div className='flex justify-between items-center m-4'>
+				Api route from Server
+				<div>
+					Name :{" "}
+					<span className='bg-primary-foreground p-2'>{resp?.firstName}</span>
+				</div>
 			</div>
 		</>
 	);

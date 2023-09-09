@@ -15,9 +15,11 @@ export default function ApiTestPage() {
 	}, []);
 
 	return (
-		<div>
-			ApiTestPage
-			<div>Name: {name}</div>
+		<div className='flex justify-between items-center m-4'>
+			<div>ApiTestPage</div>
+			<div>
+				Name: <span className="bg-primary-foreground p-2">{name}</span>
+			</div>
 		</div>
 	);
 }

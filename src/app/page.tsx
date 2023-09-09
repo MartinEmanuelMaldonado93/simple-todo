@@ -1,11 +1,13 @@
-import NavMenu from './components/NavMenu';
+import { AuthButton } from './components/AuthButton';
 import { ThemeToggle } from 'components/ToggleTheme';
+import { Navigation } from './components/NavigationList';
 
 export default function Home() {
   return (
 		<>
-      <ThemeToggle />
-			<NavMenu />
+			{/* <ThemeToggle /> */}
+			<AuthButton />
+      {/* <Navigation /> */}
 		</>
 	);
 }

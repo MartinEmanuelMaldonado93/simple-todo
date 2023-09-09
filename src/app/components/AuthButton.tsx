@@ -8,17 +8,21 @@ export function AuthButton() {
 
 	if (session) {
 		return (
-			<>
-				<span>Hello </span>
-				{session?.user?.name}
+			<div className='flex justify-between items-center m-4'>
+				<span>Hello</span>
+        <div className="bg-primary-foreground p-2">
+				  {session?.user?.name}
+        </div>
 				<br />
-				<button onClick={() => signOut()}>Sign Out</button>
-			</>
+				<Button variant={"secondary"} onClick={() => signOut()}>
+					Sign Out
+				</Button>
+			</div>
 		);
 	}
 
 	return (
-		<div className='flex justify-around items-center'>
+		<div className='flex justify-around items-center m-4'>
 			<Label>Not signed in</Label>
 			<Button variant={"secondary"} onClick={() => signIn()}>
 				sign in
