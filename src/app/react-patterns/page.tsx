@@ -8,7 +8,7 @@ export default function ReactPatterns() {
 		<div className='App'>
 			{/* <Comp1 /> */}
 			{/* <PropsPattern /> */}
-			<TabComponent />
+			{/* <TabComponent /> */}
 		</div>
 	);
 }

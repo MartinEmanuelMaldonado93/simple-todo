@@ -1,0 +1,1 @@
+The result is simple - we can create as many List variants as we want. Now you know how to decouple your components from the application domain and how to use techniques like content projection, slot pattern and function as a child to make your components more flexible and reusable.

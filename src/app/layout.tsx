@@ -30,7 +30,6 @@ export default async function RootLayout({
 						<div className="flex justify-around items-center p-2">
 							<ThemeToggle />
 							<Button variant={"outline"}>
-								{" "}
 								<Link href='/react-patterns'> See React patterns </Link>
 							</Button>
 						</div>
